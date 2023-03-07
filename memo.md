@@ -4,6 +4,14 @@
 ちゃんとしたドキュメント化は気が向いたら。
 
 ## サーバーの基本構築
+
+### サーバー上で画像表示できるようにする
+macOSのiTerm2ではコマンドをサーバーに配置しておくことで画像をターミナル上で表示が可能となるため、設定を行う。
+```
+sudo curl -o /usr/local/bin/imgcat https://iterm2.com/utilities/imgcat
+sudo chmod +x /usr/local/bin/imgcat
+```
+
 ## Misskeyの実行まで
 ## リバースプロクシの設定
 ## 証明書取得(Let's Encrypt) 
