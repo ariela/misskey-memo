@@ -12,7 +12,10 @@ sudo curl -o /usr/local/bin/imgcat https://iterm2.com/utilities/imgcat
 sudo chmod +x /usr/local/bin/imgcat
 ```
 
+### monitの導入
+### Mackerelの導入
 ## Misskeyの実行まで
+## docker-compose を systemd で実行する
 ## リバースプロクシの設定
 ## 証明書取得(Let's Encrypt) 
 ## Cloudflareの設定
