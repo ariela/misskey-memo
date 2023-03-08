@@ -12,15 +12,42 @@ sudo curl -o /usr/local/bin/imgcat https://iterm2.com/utilities/imgcat
 sudo chmod +x /usr/local/bin/imgcat
 ```
 
+### 不要パッケージを削除する
+使用しているサーバーによって異なるので適宜。
+```
+sudo apt autoremove
+sudo apt clean
+```
+
 ### monitの導入
 ### Mackerelの導入
+APIキーはサイトからとる。
+
+```
+wget -q -O - https://mackerel.io/file/script/setup-all-apt-v2.sh | MACKEREL_APIKEY='XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' sh
+```
+
 ## Misskeyの実行まで
 ## docker-compose を systemd で実行する
 ## リバースプロクシの設定
 ## 証明書取得(Let's Encrypt) 
 ## Cloudflareの設定
 ## オブジェクトストレージの設定
-## Mailgunの設定（サービス運用には非推奨）
+## SendGridの設定
+- Sender Authentication
+-- Domain Authentication
+--- Cloudflare
+--- yes
+
+![image](https://user-images.githubusercontent.com/31660/223614840-6edaf320-5f25-46cb-8eaf-cbaa85059357.png)
+
+| 項目 | 設定値 |
+| メールアドレス | 送信元メールアドレス |
+| ホスト | smtp.sendgrid.net |
+| ポート | 587 |
+| ユーザー名 | apikey (※BASE64で入力するとエラーになる）|
+| パスワード | SendGridのAPIキー (※BASE64で入力するとエラーになる）|
+
 ## Botプロテクション
 ## Summaly Proxy
 ## プロキシアカウント
@@ -87,4 +114,7 @@ sudo chmod +x /usr/local/bin/imgcat
 
 ## 絵文字のインポート
 ## ロールの設定
-## 
+## キャッシュ削除
+```
+docker system prune -a
+```
