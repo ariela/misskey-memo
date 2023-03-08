@@ -25,6 +25,17 @@ APIキーはサイトからとる。
 
 ```
 wget -q -O - https://mackerel.io/file/script/setup-all-apt-v2.sh | MACKEREL_APIKEY='XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' sh
+sudo apt install mackerel-agent-plugins
+sudo vi /etc/mackerel-agent/mackerel-agent.conf
+sudo systemctl reload mackerel-agent.service
+```
+
+```
+[plugin.metrics.nginx]
+command = "mackerel-plugin-nginx"
+
+[plugin.metrics.docker]
+command = ["mackerel-plugin-docker", "-name-format", "name"]
 ```
 
 ## Misskeyの実行まで
