@@ -11,14 +11,16 @@ export default hopeTheme({
 
   iconAssets: "fontawesome",
 
-  logo: "/logo.svg",
+  logo: "/logo.png",
 
   repo: "ariela/misskey-memo",
 
   docsDir: "src",
 
   editLink: false,
-  navbar: false,
+  navbar: navbar([
+    
+  ]),
   sidebar: sidebar({
     "/": [
       "",
