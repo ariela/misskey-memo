@@ -7,6 +7,16 @@ tag:
 
 - [パッケージ情報最新化](/misskey-memo/server/latest-packages.html)
 
+## NTP設定
+```shell
+$ sudo apt install chrony
+
+$ sudo sed -E -i 's/^(pool (.*)ubuntu(.*))/# \1/g' /etc/chrony/chrony.conf
+$ echo 'pool ntp.nict.jp iburst' | sudo tee -a /etc/chrony/chrony.conf
+$ sudo systemctl restart chrony.service
+$ chronyc sources
+```
+
 
 ## 管理用ユーザ追加
 ```shell
