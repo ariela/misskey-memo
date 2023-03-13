@@ -5,11 +5,8 @@ tag:
     - MIP
 ---
 
-## パッケージ情報最新化
-```shell
-apt list --upgradable
-apt update
-```
+- [パッケージ情報最新化](/misskey-memo/server/latest-packages.html)
+
 
 ## 管理用ユーザ追加
 ```shell
