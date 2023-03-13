@@ -1,0 +1,3 @@
+import{_ as e,W as a,X as s,Y as n}from"./framework-1800c995.js";const t={},c=n(`<p>最初にパッケージ情報を最新化してから作業を実施する。</p><div class="language-bash line-numbers-mode" data-ext="sh"><pre class="language-bash"><code><span class="token function">apt</span> list <span class="token parameter variable">--upgradable</span>
+<span class="token function">apt</span> update
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div>`,2),l=[c];function i(r,d){return a(),s("div",null,l)}const p=e(t,[["render",i],["__file","latest-packages.html.vue"]]);export{p as default};
