@@ -11,7 +11,7 @@ Requires=docker.service
 [Service]
 Type=simple
 
-Environment=COMPOSE_FILE=/home/yuki/misskey/docker-compose.yml
+Environment=COMPOSE_FILE=/home/****/misskey/docker-compose.yml
 
 ExecStart=/usr/bin/docker compose -f ${COMPOSE_FILE} up
 ExecStop=/usr/bin/docker compose -f ${COMPOSE_FILE} stop 
