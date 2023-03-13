@@ -97,8 +97,15 @@ echo 'check process mackerel-agent
       if 5 restarts within 5 cycles then alert' | sudo tee /etc/monit/conf.d/mackerel-agent
 ```
 
-
-
+### misskeyのモニタリング追加
+```shell
+echo 'check process misskey
+      matching "misskey/docker-compose.yml"
+      start program = "/usr/bin/systemctl start misskey.service"
+      stop program = "/usr/bin/systemctl stop misskey.service"
+      if 5 restarts within 5 cycles then alert
+      if failed port 3000 protocol http with timeout 10 seconds then restart' | sudo tee /etc/monit/conf.d/misskey
+```
 
 ```
 $ sudo systemctl restart monit
