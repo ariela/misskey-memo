@@ -11,8 +11,8 @@ order: 1
 
 ## 準備
 ```shell
-$ sudo mkdir -p /opt/services/misskey
-$ sudo chown ${USER}:docker /opt/services
+$ sudo mkdir -p /opt/services/misskey/.config
+$ sudo chown -R ${USER}:docker /opt/services
 $ ln -s /opt/services ~/services
 $ cd ~/misskey
 ```
