@@ -14,7 +14,7 @@ order: 1
 $ sudo mkdir -p /opt/services/misskey/.config
 $ sudo chown -R ${USER}:docker /opt/services
 $ ln -s /opt/services ~/services
-$ cd ~/misskey
+$ cd ~/services/misskey
 ```
 
 ## docker-compose.yml の作成
